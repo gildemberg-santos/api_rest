@@ -1,0 +1,15 @@
+version: "3.7"
+
+services:
+  mongodb:
+    image: mongo
+    volumes:
+      - volumes-mongodb-data:/var/lib/mongodb/data
+    ports: 
+      - "27017:27017"
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=balta
+      - MONGO_INITDB_ROOT_PASSWORD=e296cd9f
+      
+volumes:
+  volumes-mongodb-data:
